@@ -142,11 +142,11 @@
             <span id="menu_card" #cardtitle class="MenuSideMainLink bordersOfMenuSide MenuSideMainLinkDark" [class.MenuSideMainLinkDark]="cardtitle.id == activeMenuId"
                   (click)="activeMenuId = cardtitle.id"><img src="showcase/resources/images/mono/misc.svg">
                     <img class="hiddenIcons" src="showcase/resources/images/mono/miscBlue.svg" style="opacity: 0;">
-                    <span class="MainLinkText">Card</span>
+                    <span class="MainLinkText">LightSpeed</span>
             </span>
             <div class="SubMenuLinkContainer" [ngClass]="{'submenushow': (cardtitle.id == activeMenuId), 'submenuhide': (cardtitle.id != activeMenuId)}">
-                <a class="SubMenuLink" [routerLink]="['/card']" (click)="mobileMenuActive = false">&#9679; Card</a>
-                <a class="SubMenuLink" [routerLink]="['/responsive']" (click)="mobileMenuActive = false">coming soon</a>
+                <a class="SubMenuLink" [routerLink]="['/card']" (click)="mobileMenuActive = false">&#9679;Complex Card</a>
+                <a class="SubMenuLink" [routerLink]="['/responsive']" (click)="mobileMenuActive = false">Simple Card</a>
                 
             </div>
         </div>

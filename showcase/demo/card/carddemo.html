@@ -1,62 +1,89 @@
 <div class="ContentSideSections">
     <div>
-        <span class="fontSize30 TextShadow orange marginBottom20 dispBlock">Card</span>
+        <span class="fontSize30 TextShadow orange marginBottom20 dispBlock">Complex Card</span>
         <span class="defaultText">Card is a Component that can be used on to display data within card.</span>
     </div>
 </div>
 
-    <pCard  style="width:200px;border:2px solid red;">
-        <pCard-title-text>
-            ugyuhyuyhu
-            
-        </pCard-title-text>
-        <pCard-content>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </pCard-content>
+<!--Demo 1 (Simple Card with title):-
+    <pCard>
+        <pCard-title-text> Card title here </pCard-title-text> 
+        <pCard-title-content> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </pCard-title-content>   
+        
     </pCard>
 
-Demo 2:-
+Demo 2 (Simple Card):-
 
 <pCard>
+    <pCard-content>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
     text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
     with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pCard-content>
+</pCard>-->
+
+Demo3 (Complex card) :-
+<pCard>
+    <pCard-media-img> media image here</pCard-media-img>
+    <pCard-media-details>
+        <h3>Sales App</h3>
+        <p>Powered By : Innotical<br>Version 2.0.2</p>
+        <span>star here</span>    
+    </pCard-media-details>
+    <!--<pCard-title-text> Card title here </pCard-title-text> -->
+    <pCard-title-content> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+    </pCard-title-content>   
+    <pCard-action>Button here  </pCard-action> 
 </pCard>
 
 
 <div class="ContentSideSections Source">
     <p-tabView effect="fade">
         <p-tabPanel header="Documentation">
-            <h3>Import</h3>
+            <!--<h3>Import</h3>
             <pre>
-<code class="language-typescript" pCode>
-import {Card} from 'primeng/primeng';
-</code>
-</pre>
+                <code class="language-typescript" pCode>
+                import {Card} from 'primeng/primeng';
+                </code>
+            </pre>-->
 
             <h3>Getting Started</h3>
             <p>Card is an itself HTML element named as pCard.</p>
 
             <pre>
-<code class="language-markup" pCode>
-&lt;pCard&gt;some text here&lt;/pCard&gt;
-</code>
-</pre>
+                <code class="language-markup" pCode>
+                &lt;pCard&gt;
+                    &lt;pCard-media-img&gt; media image here&lt;/pCard-media-img&gt;
+                    &lt;pCard-media-details&gt;
+                        &lt;h3&gt;Sales App&lt;/h3&gt;
+                        &lt;p&gt;Powered By : Innotical&lt;br>Version 2.0.2&lt;/p&gt;
+                        &lt;span&gt;star here&lt;/span&gt;    
+                    &lt;/pCard-media-details&gt;
+                    <!--<pCard-title-text> Card title here </pCard-title-text> -->
+                    &lt;pCard-title-content&gt; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                    &lt;/pCard-title-content&gt;   
+                    &lt;pCard-action&gt;Button here  &lt;/pCard-action&gt; 
+                &lt;/pCard&gt;
+                </code>
+            </pre>
 
-            <h3>Icons</h3>
+            <!--<h3>Icons</h3>
             <p>Icon on a button is specified with icon attribute and position is customized using iconPos attribute. Default
                 icon position is left. To display only an icon, leave label as undefined.</p>
             <pre>
-<code class="language-markup" pCode>
-&lt;button pButton type="button" icon="fa-check" iconPos="left"&gt;&lt;/button&gt;
-</code>
-</pre>
+                <code class="language-markup" pCode>
+                &lt;button pButton type="button" icon="fa-check" iconPos="left"&gt;&lt;/button&gt;
+                </code>
+            </pre>
 
             <h3>Attributes</h3>
             <div class="doc-tablewrapper">
@@ -120,36 +147,36 @@ import {Card} from 'primeng/primeng';
             </div>
 
             <h3>Dependencies</h3>
-            <p>Native component that requires the css of PrimeUI Button.</p>
+            <p>Native component that requires the css of PrimeUI Button.</p>-->
         </p-tabPanel>
-        <p-tabPanel header="Source">
+        <!--<p-tabPanel header="Source">
             <pre>
-<code class="language-markup" pCode ngNonBindable>
-&lt;button pButton type="text" (click)="count()" label="Click"&gt;&lt;/button&gt;
+                <code class="language-markup" pCode ngNonBindable>
+                &lt;button pButton type="text" (click)="count()" label="Click"&gt;&lt;/button&gt;
 
-&lt;button pButton type="text" (click)="count()" icon="fa-check" label="Click"&gt;&lt;/button&gt;
+                &lt;button pButton type="text" (click)="count()" icon="fa-check" label="Click"&gt;&lt;/button&gt;
 
-&lt;button pButton type="text" (click)="count()" icon="fa-check" iconPos="right" label="Click"&gt;&lt;/button&gt;
+                &lt;button pButton type="text" (click)="count()" icon="fa-check" iconPos="right" label="Click"&gt;&lt;/button&gt;
 
-&lt;button pButton type="text" (click)="count()" icon="fa-check"&gt;&lt;/button&gt;
+                &lt;button pButton type="text" (click)="count()" icon="fa-check"&gt;&lt;/button&gt;
 
-&lt;button pButton type="text" (click)="count()" icon="fa-check" [disabled]="true" label="Disabled"&gt;&lt;/button&gt;
+                &lt;button pButton type="text" (click)="count()" icon="fa-check" [disabled]="true" label="Disabled"&gt;&lt;/button&gt;
 
-Number of clicks: {{clicks}}
-</code>
-</pre>
+                Number of clicks: {{clicks}}
+                </code>
+            </pre>
             <pre>
-<code class="language-typescript" pCode>
-export class ButtonDemo {
+                <code class="language-typescript" pCode>
+                export class ButtonDemo {
 
-    clicks: number = 0;
+                    clicks: number = 0;
 
-    count() {
-        this.clicks++;
-    }
-}
-</code>
-</pre>
-            </ p-tabPanel>
+                    count() {
+                        this.clicks++;
+                    }
+                }
+                </code>
+            </pre>
+            </p-tabPanel>-->
     </p-tabView>
 </div>
