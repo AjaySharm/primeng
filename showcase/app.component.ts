@@ -96,7 +96,7 @@ import {Askingcomponent} from "./demo/asking/asking";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
 import {Tilecomponent} from "./demo/tile/tile";
-
+import {Tabcomponent1} from "./demo/tabs/tabs";
 @Component({
     selector: 'primeng-showcase',
     templateUrl: 'showcase/app.component.html',
@@ -107,8 +107,7 @@ import {Tilecomponent} from "./demo/tile/tile";
     { path: '/setup', component: SetupComponent },
     { path: '/card', component: CardDemo },
     { path: '/simplecard', component: CardDemo },
-    
-    
+    { path: '/tab', component: Tabcomponent1},
     { path: '/lightbutton', component: Askingcomponent },
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
