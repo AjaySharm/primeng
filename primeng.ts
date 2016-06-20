@@ -71,3 +71,4 @@ export * from './components/asking/asking';
 export * from './components/navbar/navbar';
 export * from './components/sidenavbar/sidenavbar';
 export * from './components/tile/tile';
+export * from './components/tabs/tabsdemo';

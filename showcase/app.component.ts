@@ -107,8 +107,6 @@ import {Tilecomponent} from "./demo/tile/tile";
     { path: '/setup', component: SetupComponent },
     { path: '/card', component: CardDemo },
     { path: '/simplecard', component: ViewCardDemo },
-    
-    
     { path: '/lightbutton', component: Askingcomponent },
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
