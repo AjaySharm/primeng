@@ -91,7 +91,7 @@ import {DataTableExportDemo} from "./demo/datatable/datatableexportdemo";
 import {TabMenuDemo} from "./demo/tabmenu/tabmenudemo";
 import {TooltipDemo} from "./demo/tooltip/tooltipdemo";
 import {MenuModelApi} from "./demo/menumodel/menumodelapi";
-import {CardDemo} from "./demo/card/carddemo";
+import {CardDemo, ViewCardDemo } from "./demo/card/carddemo";
 import {Askingcomponent} from "./demo/asking/asking";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
@@ -106,7 +106,7 @@ import {Tilecomponent} from "./demo/tile/tile";
     { path: '/', component: HomePageComponent },
     { path: '/setup', component: SetupComponent },
     { path: '/card', component: CardDemo },
-    { path: '/simplecard', component: CardDemo },
+    { path: '/simplecard', component: ViewCardDemo },
     
     
     { path: '/lightbutton', component: Askingcomponent },
