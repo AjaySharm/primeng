@@ -15,7 +15,7 @@ import {NgClass} from '@angular/common';
     directives: [NgClass]
 })
 
-export class Tile {
+export class Modal {
     @Input() pstyle: any;
     constructor(private el: ElementRef, private domHandler: DomHandler) {
         console.log("Navbar")
