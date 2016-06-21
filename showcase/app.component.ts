@@ -92,10 +92,10 @@ import {TabMenuDemo} from "./demo/tabmenu/tabmenudemo";
 import {TooltipDemo} from "./demo/tooltip/tooltipdemo";
 import {MenuModelApi} from "./demo/menumodel/menumodelapi";
 import {CardDemo, ViewCardDemo } from "./demo/card/carddemo";
-import {Askingcomponent} from "./demo/asking/asking";
+import {Buttoncomponent} from "./demo/buttondemo/buttondemo";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
-import {Tilecomponent} from "./demo/tile/tile";
+import {Modalcomponent} from "./demo/modaldemo/modaldemo";
 
 @Component({
     selector: 'primeng-showcase',
@@ -107,12 +107,10 @@ import {Tilecomponent} from "./demo/tile/tile";
     { path: '/setup', component: SetupComponent },
     { path: '/card', component: CardDemo },
     { path: '/simplecard', component: ViewCardDemo },
-    
-    
-    { path: '/lightbutton', component: Askingcomponent },
+    { path: '/lightbutton', component: Buttoncomponent},
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
-    { path: '/modal', component: Tilecomponent },
+    { path: '/modal', component: Modalcomponent },
 
     { path: '/theming', component: ThemingComponent },
     { path: '/inputtext', component: InputTextDemo },

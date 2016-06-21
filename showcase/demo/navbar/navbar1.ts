@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Navbar} from '../../../components/navbar/navbar';
+
+
 @Component({
   
     selector: 'navbar',
@@ -12,4 +14,4 @@ export class Navbarcomponent {
 
     
 
-}
+}   

@@ -9,16 +9,9 @@ import {NgClass} from '@angular/common';
             <ng-content></ng-content>
         </div>
     `,
-    // styles: [`.success{
-    //     color:red
-    // }
-    // .warning{
-    //     color:blue
-    // }`],
-    
     directives: [NgClass]
 })
-export class Space {
+export class Lbutton {
     
     
     @Input() style: any;
