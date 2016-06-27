@@ -97,7 +97,7 @@ import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
 
 import {Modalcomponent} from "./demo/modaldemo/modaldemo";
-import {ProgressCircularComponent} from ./demo/progresscircular/progresscirculardemo
+import {ProgressCircularComponent} from "./demo/progresscircular/progresscirculardemo";
 
 @Component({
     selector: 'primeng-showcase',
