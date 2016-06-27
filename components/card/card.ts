@@ -43,12 +43,12 @@ export class Card {
     selector: 'pViewCard',
     template: `<div [ngStyle]="pstyle" [ngClass]="{'ui-view-card': true}" class="ui-grid ui-grid-responsive ui-grid-pad">
        <div [ngClass]= "{'ui-view-card-title': true}" class="ui-grid-col-12" >
-            <div [ngClass] = "{'ui-card-media' : true}"  class="ui-grid-col-2 " >
+            <div [ngClass] = "{'ui-card-media' : true}"  class="ui-grid-col-3 " >
                 <div [ngClass] = "{'ui-card-media-img' : !isActive, active: isActive}" (click)="toggleActive()">
                     <ng-content select="pCard-media-img"></ng-content>
                 </div>
             </div>
-            <div [ngClass] = "{'ui-card-title' : true}" class="ui-grid-col-10">
+            <div [ngClass] = "{'ui-card-title' : true}" class="ui-grid-col-9">
                 <div [ngClass]="{'ui-card-title-text': true}">
                     <ng-content select="pCard-title-text"></ng-content>
                 </div>

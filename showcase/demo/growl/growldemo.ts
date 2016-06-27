@@ -31,6 +31,10 @@ export class GrowlDemo {
         this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
     }
 
+    showSuccess() {
+        this.msgs = [];
+        this.msgs.push({severity:'success', summary:'Success Message', detail:'Validation Success'});
+    }
     showMultiple() {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeNG rocks'});
