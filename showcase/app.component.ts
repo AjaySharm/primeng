@@ -91,11 +91,13 @@ import {DataTableExportDemo} from "./demo/datatable/datatableexportdemo";
 import {TabMenuDemo} from "./demo/tabmenu/tabmenudemo";
 import {TooltipDemo} from "./demo/tooltip/tooltipdemo";
 import {MenuModelApi} from "./demo/menumodel/menumodelapi";
-import {CardDemo} from "./demo/card/carddemo";
+import {CardDemo, ViewCardDemo } from "./demo/card/carddemo";
 import {Buttoncomponent} from "./demo/buttondemo/buttondemo";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
+
 import {Modalcomponent} from "./demo/modaldemo/modaldemo";
+import {ProgressCircularComponent} from ./demo/progresscircular/progresscirculardemo
 
 @Component({
     selector: 'primeng-showcase',
@@ -106,12 +108,13 @@ import {Modalcomponent} from "./demo/modaldemo/modaldemo";
     { path: '/', component: HomePageComponent },
     { path: '/setup', component: SetupComponent },
     { path: '/card', component: CardDemo },
-    { path: '/simplecard', component: CardDemo },
-  
+    { path: '/simplecard', component: ViewCardDemo },
+
     { path: '/lightbutton', component: Buttoncomponent},
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
     { path: '/modal', component: Modalcomponent },
+    { path: '/progresscircular', component : ProgressCircularComponent},
 
     { path: '/theming', component: ThemingComponent },
     { path: '/inputtext', component: InputTextDemo },

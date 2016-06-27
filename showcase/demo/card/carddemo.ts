@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Card} from '../../../components/card/card';
+import {Card, ViewCard,OrderCard} from '../../../components/card/card';
 
 
 @Component({
@@ -7,9 +7,29 @@ import {Card} from '../../../components/card/card';
     directives: [Card]
 })
 
-export class CardDemo {
-    
+
+
+export class CardDemo {    
     constructor(){
         console.log("called component")
+    }
+}
+
+@Component({
+    templateUrl: 'showcase/demo/card/viewcarddemo.html',
+    directives: [ViewCard,OrderCard]
+})
+export class ViewCardDemo {
+    
+    constructor(){
+        console.log("called component viewcarddemo")
+    }
+    OnActives(obj){
+       console.log("active");
+        //alert("saddsfasdfa");
+    }   
+    OnActives2(){
+       console.log("active");
+        alert("saddsfasdfa");
     }
 }
