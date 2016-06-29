@@ -102,6 +102,7 @@ import { PCardDemo } from "./demo/p-card/p-card";
 import { PProcedureCardDemo } from "./demo/p-procedure-card/p-procedure-card";
 
 import {Modalcomponent} from "./demo/modaldemo/modaldemo";
+import {ProgressCircularComponent} from "./demo/progresscircular/progresscirculardemo";
 
 @Component({
     selector: 'primeng-showcase',
@@ -118,6 +119,7 @@ import {Modalcomponent} from "./demo/modaldemo/modaldemo";
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
     { path: '/modal', component: Modalcomponent },
+    { path: '/progresscircular', component : ProgressCircularComponent},
 
     { path: '/theming', component: ThemingComponent },
     { path: '/inputtext', component: InputTextDemo },

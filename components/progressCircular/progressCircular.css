@@ -1,0 +1,92 @@
+
+.loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .loader.square .block {
+            border-radius: 0px;
+            width: 74px;
+            height: 74px;
+        }
+        .loader.square .block:before, .loader.square .block:after {
+            bottom: 2px;
+        }
+        .loader.square .block:before {
+            left: 2px;
+        }
+        .loader.square .block:after {
+            right: 2px;
+        }
+        .loader.square .block .box {
+            left: 2px;
+            top: 2px;
+            -webkit-animation-name: slide;
+            animation-name: slide;
+        }
+        .loader.switch .block {
+            -webkit-animation-name: switch;
+            animation-name: switch;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-timing-function: steps(4);
+            animation-timing-function: steps(4);
+        }
+        .loader.switch .block .box {
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+        }
+
+        .block {
+            position: absolute;
+            color: #cf4249;
+            border: 2px solid;
+            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        .block:before, .block:after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #cf4249;
+            border-radius: 4px;
+        }
+        .block:before {
+            left: 2px;
+        }
+        .block:after {
+            right: 2px;
+        }
+
+        .box {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #cf4249;
+            border-radius: 4px;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes switch {
+            to {
+                -webkit-transform: translate(-50%, -50%) rotate(-405deg);
+                transform: translate(-50%, -50%) rotate(-405deg);
+            }
+        }
+        @keyframes switch {
+            to {
+                -webkit-transform: translate(-50%, -50%) rotate(-405deg);
+                transform: translate(-50%, -50%) rotate(-405deg);
+            }
+        }
