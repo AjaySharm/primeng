@@ -96,6 +96,11 @@ import {Buttoncomponent} from "./demo/buttondemo/buttondemo";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
 
+// Pleateando
+import { PButtonDemo } from "./demo/p-button/buttondemo";
+import { PCardDemo } from "./demo/p-card/p-card";
+import { PProcedureCardDemo } from "./demo/p-procedure-card/p-procedure-card";
+
 import {Modalcomponent} from "./demo/modaldemo/modaldemo";
 
 @Component({
@@ -109,7 +114,7 @@ import {Modalcomponent} from "./demo/modaldemo/modaldemo";
     { path: '/card', component: CardDemo },
     { path: '/simplecard', component: ViewCardDemo },
 
-    { path: '/lightbutton', component: Buttoncomponent},
+    { path: '/lightbutton', component: Buttoncomponent },
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
     { path: '/modal', component: Modalcomponent },
@@ -202,7 +207,12 @@ import {Modalcomponent} from "./demo/modaldemo/modaldemo";
     { path: '/datatableexport', component: DataTableExportDemo },
     { path: '/tabmenu', component: TabMenuDemo },
     { path: '/tooltip', component: TooltipDemo },
-    { path: '/menumodel', component: MenuModelApi }
+    { path: '/menumodel', component: MenuModelApi },
+    
+    // Pleateando
+    { path: '/PButtonDemo', component: PButtonDemo },
+    { path: '/PCardDemo', component: PCardDemo },
+    { path: '/Procedure-Card', component: PProcedureCardDemo }
 ])
 export class AppComponent {
 

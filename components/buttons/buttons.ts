@@ -1,5 +1,4 @@
-
-import {Component,ElementRef,AfterContentInit,Input,Output,EventEmitter} from '@angular/core';
+import {Component, ElementRef, AfterContentInit, Input, Output, EventEmitter} from '@angular/core';
 import {NgClass} from '@angular/common';
 
 @Component({
@@ -12,11 +11,6 @@ import {NgClass} from '@angular/common';
     directives: [NgClass]
 })
 export class Lbutton {
-    
-    
     @Input() style: any;
-    
     @Input() styleClass: string;
-    
-    
 }
