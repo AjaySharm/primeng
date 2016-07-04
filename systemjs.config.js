@@ -4,7 +4,8 @@
   var map = {
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-    '@angular':                   'node_modules/@angular'
+    '@angular':                   'node_modules/@angular',
+    'datetime-picker': 'node_modules/ng2-datetime-picker'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
@@ -12,7 +13,8 @@
     'showcase':                   { main: 'boot.js', defaultExtension: 'js' },
     'components':                 { defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { defaultExtension: 'js' }
+    'angular2-in-memory-web-api': { defaultExtension: 'js' },
+    'datetime-picker' :           { main: 'dist/index.js', defaultExtension: 'js' }
   };
 
   var packageNames = [
@@ -24,7 +26,7 @@
     '@angular/platform-browser-dynamic',
     '@angular/router',
     '@angular/testing',
-    '@angular/upgrade'
+    '@angular/upgrade',
   ];
 
   // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }

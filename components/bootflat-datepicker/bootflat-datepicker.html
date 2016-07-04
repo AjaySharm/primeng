@@ -1,0 +1,103 @@
+<!--<div class="mydp" [ngStyle]="{'height': height, 'width': width, 'border-style': border}">
+    <div class="selectiongroup" *ngIf="showTextBox">
+        <span class="selection" [ngStyle]="{'height': height, 'line-height': height, 'font-size': '14px'}" (click)="openBtnClicked()">{{selectionDayTxt ? selectionDayTxt : todayDate}}</span>
+        <span class="selbtngroup" [style.height]="height">
+        <button type="button" class="btnpicker" (click)="openBtnClicked()" style="background:#3BAFDA"><span class="icon icon-calendar"></span></button>
+        </span>
+    </div>
+    <div class="row" *ngIf="showSelector" [ngStyle]="{'width':CalWidth}">
+        <div class="col-md-12" style="z-index:1000">
+            <div class="calendar" [ngStyle]="{'background-color': background}">
+                <div class="years clearfix">
+
+                    <table class="header" style="background:#3BAFDA; border:0">
+                        <tr>
+                            <td>
+                                <div style="float:left">
+                                    <div class="headerbtn" style="background:#3BAFDA" (click)="prevMonth()"><span class="icon icon-left" style="background:#3BAFDA;color:white"></span></div>
+                                    <div class="headermonthtxt" style="color:white">{{visibleMonth.monthTxt}}</div>
+                                    <div class="headerbtn" style="background:#3BAFDA" (click)="nextMonth()"><span class="icon icon-right" style="background:#3BAFDA;color:white"></span></div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div style="float:right">
+                                    <div class="headerbtn" (click)="prevYear()" style="background:#3BAFDA"><span class="icon icon-left" style="background:#3BAFDA; color:white"></span></div>
+                                    <div class="headeryeartxt" style="color:white">{{visibleMonth.year}}</div>
+                                    <div class="headerbtn" (click)="nextYear()" style="background:#3BAFDA"><span class="icon icon-right" style="background:#3BAFDA;color:white"></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="days">
+                    <div class="clearfix">
+                        <div class="unit" *ngFor="let days of weekDays">{{days}}</div>
+                    </div>
+                    <div class="clearfix">
+                        <div *ngFor="let w of dates">
+                            <div *ngFor="let d of w" (click)="cellClicked(d)" [ngClass]="{'unit active': selectedDate.day===d.day && selectedDate.month===d.month && selectedDate.year===d.year && d.cmo===CURR_MONTH || d.currDay }">
+                                <div style="background-color:inherit" [ngClass]="{'unit older': d.cmo===PREV_MONTH || d.cmo===NEXT_MONTH, 'unit': d.cmo===CURR_MONTH || d.cmo!==CURR_MONTH}"><b>{{d.day}}</b></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+<div >
+    <div class="selectiongroup" *ngIf="showTextBox">
+        <span class="selection" [ngStyle]="{'height': height, 'line-height': height, 'font-size': '14px'}" (click)="openBtnClicked()">{{selectionDayTxt ? selectionDayTxt : todayDate}}</span>
+        <span class="selbtngroup" [style.height]="height">
+        <button type="button" class="btnpicker" (click)="openBtnClicked()"><span class="icon icon-calendar"></span></button>
+        </span>
+    </div>
+
+
+
+
+    <div class="calendar"  *ngIf="showSelector">
+        <div class="years clearfix">
+            <table class="header" >
+                <tr>
+                    <td>
+                        <div style="float:left">
+                            <div class="headerbtn" style="float:left"  (click)="prevMonth()"><span class="glyphicon glyphicon-chevron-left"></span></div>
+                            <div class="headermonthtxt" style="color:grey; float:left;">{{visibleMonth.monthTxt}}</div>
+                            <div class="headerbtn"  (click)="nextMonth()"><span class="glyphicon glyphicon-chevron-right" ></span></div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div style="float:right">
+                            <div class="headerbtn"style="float:left" (click)="prevYear()"><span class="glyphicon glyphicon-chevron-left"></span></div>
+                            <div class="headeryeartxt" style="color:grey;float:left;">{{visibleMonth.year}}</div>
+                            <div class="headerbtn" (click)="nextYear()"><span class="glyphicon glyphicon-chevron-right" ></span></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <div class="days">
+            <div class="clearfix">
+                <div class="unit" *ngFor="let days of weekDays">{{days}}</div>
+            </div>
+            <div class="clearfix">
+                <div *ngFor="let w of dates">
+                    <div *ngFor="let d of w" (click)="cellClicked(d)" [ngClass]="{'unit active': selectedDate.day===d.day && selectedDate.month===d.month && selectedDate.year===d.year && d.cmo===CURR_MONTH || d.currDay }">
+                        <div style="background-color:inherit" [ngClass]="{'unit older': d.cmo===PREV_MONTH || d.cmo===NEXT_MONTH, 'unit': d.cmo===CURR_MONTH || d.cmo!==CURR_MONTH}"><b>{{d.day}}</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

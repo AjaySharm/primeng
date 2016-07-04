@@ -18,7 +18,7 @@ import {NgClass} from '@angular/common';
 export class Modal {
     @Input() pstyle: any;
     constructor(private el: ElementRef, private domHandler: DomHandler) {
-        console.log("Navbar")
+        console.log("modal")
     }
 }
 

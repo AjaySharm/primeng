@@ -71,4 +71,5 @@ export * from './components/buttons/buttons';
 export * from './components/navbar/navbar';
 export * from './components/sidenavbar/sidenavbar';
 export * from './components/modal/modal';
-
+export * from './components/calandarlight/calandarlight';
+export * from './components/paginatornew/paginatornew';

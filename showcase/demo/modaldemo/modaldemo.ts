@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Modal} from '../../../components/modal/modal';
 import {Lbutton} from '../../../components/buttons/buttons';
+
+
 @Component({
 
     selector: 'tile',
@@ -10,4 +12,8 @@ import {Lbutton} from '../../../components/buttons/buttons';
 })
 export class Modalcomponent {
 
+  
+
 }
+
+

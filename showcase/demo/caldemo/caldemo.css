@@ -1,0 +1,42 @@
+.year{
+  padding:7px;
+   cursor: pointer;
+   color:#636363;
+}
+.week{
+     padding:7px;
+     cursor: pointer;
+     color:#636363;
+}
+.days{
+   padding:4px; 
+   width:40px;
+   color:#636363;
+   cursor: pointer;
+}
+.checkClass{
+     display: none;
+}
+
+.backWeek{
+    background:#CF424A;
+}
+
+.unit{
+    padding:2px;
+}
+
+.daycheck{
+     background:#CF424A ;
+}
+table, th, td {
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+td:hover{
+  background:grey;
+  
+}

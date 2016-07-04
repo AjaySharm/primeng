@@ -1,0 +1,311 @@
+<div class="container">
+    
+     <a-button styleClass="primary-sm" data-toggle="modal" data-target="#myModal" >small</a-button>
+   
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+         
+            <div class="modal-content">
+           
+                <div class="modal-body" style="margin-bottom: 200px;">
+                    <div class="row">
+                        <div class="col-md-6 pull-left">
+                            <h4>frequencies</h4>
+                        </div>
+                        <div class="col-md-6 pull-right">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Daily
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" (click)="getyear()">yearly</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" (click)="getmonth()">monthly</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" (click)="getweek()">weekly</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" (click)="getday()">Daily</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="year">
+                        <div class="every">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="from">Every</label>
+                                    <p class="input-group">
+                                        <input type="text" id="from" class="form-control" />
+                                    </p>
+                                    <label for="to">year</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yearview">
+                            <table style="width:50%">
+                                <tr>
+                                    <td [ngClass]="{'backWeek':jan.checked}"><label class="year" (click)="saveyear('jan',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #jan> Jan</label></td>
+
+                                    <td [ngClass]="{'backWeek':feb.checked}"><label class="year" (click)="saveyear('feb',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #feb> Feb</label></td>
+                                    <td [ngClass]="{'backWeek':mar.checked}"><label class="year" (click)="saveyear('mar',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #mar> Mar</label></td>
+                                    <td [ngClass]="{'backWeek':apr.checked}"><label class="year" (click)="saveyear('apr',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #apr> Apr</label></td>
+                                    <td [ngClass]="{'backWeek':may.checked}"><label class="year" (click)="saveyear('may',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #may> May</label></td>
+                                    <td [ngClass]="{'backWeek':jun.checked}"><label class="year" (click)="saveyear('jun',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #jun> Jun</label></td>
+                                </tr>
+                                <tr>
+                                    <td [ngClass]="{'backWeek':jul.checked}"><label class="year" (click)="saveyear('jul',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #jul> Jul</label></td>
+                                    <td [ngClass]="{'backWeek':aug.checked}"><label class="year" (click)="saveyear('aug',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #aug> Aug</label></td>
+                                    <td [ngClass]="{'backWeek':sep.checked}"><label class="year" (click)="saveyear('sep',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #sep> Sep</label></td>
+                                    <td [ngClass]="{'backWeek':oct.checked}"><label class="year" (click)="saveyear('oct',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #oct> Oct</label></td>
+                                    <td [ngClass]="{'backWeek':nov.checked}"><label class="year" (click)="saveyear('nov',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #nov> Nov</label></td>
+                                    <td [ngClass]="{'backWeek':dec.checked}"><label class="year" (click)="saveyear('dec',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #dec>Dec</label></td>
+                                </tr>
+                            </table>
+                        </div>
+                        {{years}}
+
+                    </div>
+
+
+
+
+
+                    <div *ngIf="month">
+                        <div class="every">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="from">Every</label>
+                                    <p class="input-group">
+                                        <input type="text" id="from" class="form-control" />
+                                    </p>
+                                    <label for="to">month</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="daysview">
+                            <table style="width:50%">
+                                <tr>
+                                    <td [ngClass]="{'daycheck':one.checked}">
+                                        <label class="days" (click)="savedays('1',$event.target.checked)">
+                                          <input type="checkbox" class="checkClass" #one> 1</label>
+                                    </td>
+
+                                    <td [ngClass]="{'daycheck':two.checked}">
+                                        <label class="days" (click)="savedays('2',$event.target.checked)">
+                                             <input type="checkbox" class="checkClass" #two> 2</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':three.checked}">
+                                        <label class="days" (click)="savedays('3',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #three> 3</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':four.checked}">
+                                        <label class="days" (click)="savedays('4',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #four> 4</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':five.checked}">
+                                        <label class="days" (click)="savedays('5',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #five> 5</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':six.checked}">
+                                        <label class="days" (click)="savedays('6',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #six> 6</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':sev.checked}">
+                                        <label class="days" (click)="savedays('7',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #sev> 7</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td [ngClass]="{'daycheck':eig.checked}">
+                                        <label class="days" (click)="savedays('8',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #eig> 8</label>
+                                    </td>
+
+                                    <td [ngClass]="{'daycheck':nine.checked}">
+                                        <label class="days" (click)="savedays('9',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #nine> 9</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':ten.checked}">
+                                        <label class="days" (click)="savedays('10',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #ten> 10</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':ele.checked}">
+                                        <label class="days" (click)="savedays('11',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #ele> 11</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':tlw.checked}">
+                                        <label class="days" (click)="savedays('12',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #tlw> 12</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':thi.checked}">
+                                        <label class="days" (click)="savedays('13',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #thi> 13</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':fot.checked}">
+                                        <label class="days" (click)="savedays('14',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #fot> 14</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td [ngClass]="{'daycheck':fit.checked}">
+                                        <label class="days" (click)="savedays('15',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #fit> 15</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':stn.checked}">
+                                        <label class="days" (click)="savedays('16',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #stn> 16</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':svtn.checked}">
+                                        <label class="days" (click)="savedays('17',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #svtn> 17</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':etn.checked}">
+                                        <label class="days" (click)="savedays('18',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #etn> 18</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':nintn.checked}">
+                                        <label class="days" (click)="savedays('19',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #nintn> 19</label>
+                                    </td>
+
+                                    <td [ngClass]="{'daycheck':twtn.checked}">
+                                        <label class="days" (click)="savedays('20',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #twtn> 20</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t1.checked}">
+                                        <label class="days" (click)="savedays('21',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t1> 21</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td [ngClass]="{'daycheck':t2.checked}">
+                                        <label class="days" (click)="savedays('22',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t2> 22</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t3.checked}">
+                                        <label class="days" (click)="savedays('23',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t3> 23</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t4.checked}">
+                                        <label class="days" (click)="savedays('24',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t4> 24</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t5.checked}">
+                                        <label class="days" (click)="savedays('25',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t5> 25</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t6.checked}">
+                                        <label class="days" (click)="savedays('26',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t6> 26</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t7.checked}">
+                                        <label class="days" (click)="savedays('27',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t7> 27</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t8.checked}">
+                                        <label class="days" (click)="savedays('28',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t8> 28</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td [ngClass]="{'daycheck':t9.checked}">
+                                        <label class="days" (click)="savedays('29',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t9> 29</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t30.checked}">
+                                        <label class="days" (click)="savedays('30',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t30> 30</label>
+                                    </td>
+                                    <td [ngClass]="{'daycheck':t31.checked}">
+                                        <label class="days" (click)="savedays('31',$event.target.checked)">
+                                                <input type="checkbox" class="checkClass" #t31> 31</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        {{days}}
+
+                    </div>
+
+
+
+                    <div *ngIf="week">
+                        <div class="every">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="from">Every</label>
+                                    <p class="input-group">
+                                        <input type="text" id="from" class="form-control" />
+                                    </p>
+                                    <label for="to">week</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weekview">
+                            <table style="width:50%">
+                                <tr>
+                                    <td [ngClass]="{'backWeek':sun.checked}"> <label class="week" (click)="save('Sun',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #sun> sun</label></td>
+
+                                    <td [ngClass]="{'backWeek':mon.checked}"> <label class="week" (click)="save('Mon',$event.target.checked)">
+                              <input type="checkbox" class="checkClass"#mon > mon</label></td>
+
+                                    <td [ngClass]="{'backWeek':tus.checked}"> <label class="week" (click)="save('Tus',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #tus> tus</label></td>
+
+                                    <td [ngClass]="{'backWeek':wed.checked}"> <label class="week" (click)="save('Wed',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #wed> wed</label></td>
+
+                                    <td [ngClass]="{'backWeek':thr.checked}"> <label class="week" (click)="save('Thr',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #thr >thr</label></td>
+
+                                    <td [ngClass]="{'backWeek':fri.checked}"> <label class="week" (click)="save('Fri',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #fri> fri</label></td>
+
+                                    <td [ngClass]="{'backWeek':sat.checked}"> <label class="week" (click)="save('Sat',$event.target.checked)">
+                              <input type="checkbox" class="checkClass" #sat>sat</label></td>
+                                </tr>
+                            </table>
+                        </div>
+                        {{weekdays}}
+
+                    </div>
+
+
+                    <div *ngIf="day">
+                        <div class="every">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="from">Every</label>
+                                    <p class="input-group">
+                                        <input type="text" id="from" class="form-control" />
+                                    </p>
+                                    <label for="to">Day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

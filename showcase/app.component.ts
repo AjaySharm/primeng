@@ -96,8 +96,12 @@ import {Buttoncomponent} from "./demo/buttondemo/buttondemo";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
 
+import {calandarcomponent} from "./demo/caldemo/caldemo";
 import {Modalcomponent} from "./demo/modaldemo/modaldemo";
-import {ProgressCircularComponent} from ./demo/progresscircular/progresscirculardemo
+// import {ProgressCircularComponent} from ./demo/progresscircular/progresscirculardemo
+import {Datepickerdemo} from "./demo/datepicker/datepicker";
+import {PaginatorComponent} from "./demo/paginatordemo/paginatordemo";
+
 
 @Component({
     selector: 'primeng-showcase',
@@ -114,8 +118,11 @@ import {ProgressCircularComponent} from ./demo/progresscircular/progresscircular
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
     { path: '/modal', component: Modalcomponent },
-    { path: '/progresscircular', component : ProgressCircularComponent},
-
+    // { path: '/progresscircular', component : ProgressCircularComponent},
+   { path: '/calandar2', component: calandarcomponent },
+  { path: '/datepicker', component: Datepickerdemo },
+  { path: '/page', component:  PaginatorComponent},
+  
     { path: '/theming', component: ThemingComponent },
     { path: '/inputtext', component: InputTextDemo },
     { path: '/button', component: ButtonDemo },
