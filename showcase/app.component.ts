@@ -96,12 +96,19 @@ import {Buttoncomponent} from "./demo/buttondemo/buttondemo";
 import {Navbarcomponent} from "./demo/navbar/navbar1";
 import {sidebarcomponent} from './demo/sidenav/sidenav';
 
+
 import {calandarcomponent} from "./demo/caldemo/caldemo";
-import {Modalcomponent} from "./demo/modaldemo/modaldemo";
 // import {ProgressCircularComponent} from ./demo/progresscircular/progresscirculardemo
 import {Datepickerdemo} from "./demo/datepicker/datepicker";
 import {PaginatorComponent} from "./demo/paginatordemo/paginatordemo";
 
+// Pleateando
+import { PButtonDemo } from "./demo/p-button/buttondemo";
+import { PCardDemo } from "./demo/p-card/p-card";
+import { PProcedureCardDemo } from "./demo/p-procedure-card/p-procedure-card";
+
+import {Modalcomponent} from "./demo/modaldemo/modaldemo";
+import {ProgressCircularComponent} from "./demo/progresscircular/progresscirculardemo";
 
 @Component({
     selector: 'primeng-showcase',
@@ -114,7 +121,7 @@ import {PaginatorComponent} from "./demo/paginatordemo/paginatordemo";
     { path: '/card', component: CardDemo },
     { path: '/simplecard', component: ViewCardDemo },
 
-    { path: '/lightbutton', component: Buttoncomponent},
+    { path: '/lightbutton', component: Buttoncomponent },
     { path: '/navbar', component: Navbarcomponent },
     { path: '/sidenav', component: sidebarcomponent },
     { path: '/modal', component: Modalcomponent },
@@ -211,7 +218,12 @@ import {PaginatorComponent} from "./demo/paginatordemo/paginatordemo";
     { path: '/datatableexport', component: DataTableExportDemo },
     { path: '/tabmenu', component: TabMenuDemo },
     { path: '/tooltip', component: TooltipDemo },
-    { path: '/menumodel', component: MenuModelApi }
+    { path: '/menumodel', component: MenuModelApi },
+    
+    // Pleateando
+    { path: '/PButtonDemo', component: PButtonDemo },
+    { path: '/PCardDemo', component: PCardDemo },
+    { path: '/Procedure-Card', component: PProcedureCardDemo }
 ])
 export class AppComponent {
 
